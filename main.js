@@ -21,11 +21,16 @@ function validateEmail(e) {
 
     container.style.display = "none";
     confirmation.style.display = "flex";
+    confirmation.querySelector("p").innerHTML = `
+     A confirmation email has been sent to
+          <strong>${emailInput.value}</strong>. Please open it and click the
+          button inside to confirm your subscription.
+    `;
   }
 }
 
 emailInput.addEventListener("focus", (e) => {
-    emailInput.style.borderColor = "hsl(234, 29%, 20%)";
+  emailInput.style.borderColor = "hsl(234, 29%, 20%)";
 });
 
 confirmation.querySelector("button").addEventListener("click", (e) => {
