@@ -27,6 +27,7 @@ function validateEmail(e) {
           button inside to confirm your subscription.
     `;
   }
+
 }
 
 emailInput.addEventListener("focus", (e) => {
@@ -36,6 +37,8 @@ emailInput.addEventListener("focus", (e) => {
 confirmation.querySelector("button").addEventListener("click", (e) => {
   confirmation.style.display = "none";
   container.style.display = "flex";
+
+  emailInput.value = ''
 });
 
 form.addEventListener("submit", validateEmail);
