@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: hsl(234, 29%, 20%);
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: clamp(2.34rem, 1.9311rem + 2.0446vi, 3.5156rem);
+  color: hsl(234, 29%, 20%);
+}
+
+p {
+  color: hsl(234, 29%, 20%);
+  font-size: 1em;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 0 2em 0;
+  gap: 1em;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  line-height: 1.5;
+  font-size: 1em;
+}
+
+li img {
+  margin-right: 1em;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: min(57.875em, 100%);
+  height: 40.0625em;
+  background-color: #fff;
+  border-radius: 2em;
+  padding: 20px;
+}
+
+.login-details {
+  text-align: start;
+  padding: 60px 60px 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+form label {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+form input {
+  height: 4em;
+  margin: 0.8em 0 1.2em 0;
+  padding-left: 1.5em;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid hsl(230, 3%, 63%);
+}
+
+form button {
+  font-size: clamp(0.875rem, 0.8315rem + 0.2174vi, 1rem);
+  height: 4em;
+  margin: 0.5em 0;
+  background-color: hsl(234, 29%, 20%);
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  outline: 0;
+  font-weight: bolder;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(254, 82, 122, 1) 0%,
+    rgba(255, 98, 87, 1) 100%
+  );
+  box-shadow: 0 0 20px 0 rgba(254, 82, 122, 0.5);
+}
+
+form p {
+  display: none;
+}
+
+.confirmation {
+  display: none;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+  width: min(32.5em, 100%);
+  height: 31.5em;
+  background-color: #fff;
+  padding: 64px;
+  border-radius: 2em;
+}
+
+.confirmation h1 {
+  line-height: 1;
+}
+
+.confirmation p {
+  line-height: 1.3;
+}
+
+.confirmation button {
+  width: 100%;
+  height: 3.5em;
+  background-color: hsl(234, 29%, 20%);
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  outline: 0;
+  font-weight: bolder;
+  font-size: clamp(0.875rem, 0.8315rem + 0.2174vi, 1rem);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.confirmation button:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(254, 82, 122, 1) 0%,
+    rgba(255, 98, 87, 1) 100%
+  );
+  box-shadow: 0 0 20px 0 rgba(254, 82, 122, 0.5);
+}
+
+.mobile {
+  display: none;
+}
+
+.error {
+  background-color: hsl(3, 78%, 91%);
+  color: hsl(4, 100%, 67%);
+}
+
+.error-message {
+  color: hsl(4, 100%, 67%);
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media (width < 800px) {
+  main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+  ul {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 0;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column-reverse nowrap;
+    height: fit-content;
+    background-color: #fff;
+    border-radius: 2em;
+    padding: 0px;
+    height: 100%;
+    border-radius: 0em;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    width: 100%;
+    display: block;
+  }
+
+  .img {
+    width: 100%;
+  }
+
+  .login-details {
+    text-align: start;
+    padding: 60px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+  }
+
+  .confirmation {
+    display: none;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    width: min(32.5em, 100%);
+    height: 100%;
+    background-color: #fff;
+    padding: 64px;
+    border-radius: 0;
+    gap: 2.5em;
+  }
+
+  .confirmation button {
+    margin-top: 15em;
+  }
+}
